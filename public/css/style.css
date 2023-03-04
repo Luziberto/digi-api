@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 5%;
+}
+
+.container {
+    display:flex;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: green;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    position: relative;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    align-items: center;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: 0px 100px;
+}
+
+.button-subgroup {
+    background-color: #a9c7cf;
+    border-radius: 50%;
+    width: 65px;
+    height: 45px;
+    padding: 10px 20px;
+    border: 4px solid black;
+}
+.button-circle {
+    border-radius: 9999px;
+    width: 40px;
+    height: 40px;
+    background-color: #a9c7cf;
+}
+
+.digivice-button {
+    border: 4px solid black;
+    border-radius: 50%;
+    height: 40px;
+    cursor:pointer;
+
+}
+
+.button-subgroup:hover {
+    background-color: #9eaeb8;
+    cursor:pointer;
+}
+
+.digivice-screen {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border: 4px solid black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: 0px 100px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
