@@ -1,17 +1,75 @@
 body {
     margin: 0;
-    padding: 5%;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:black;
 }
 
-.container {
+.digivice-screen-border {
+    background-color: black;
+    border-radius: 99999px;
+    height: 280px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 17px;
+    border: 4px solid #523e56;
+    position: relative;
+}
+
+.digivice {
     display:flex;
-    min-width: 100%;
-    min-height: 100%;
-    background-color: green;
+    width: 60%;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
+    min-height: 50vh;
+    border-radius: 999999px;
+    background: radial-gradient(circle 120px at top left ,#0000 98%,#e9dcf5) top left,
+                radial-gradient(circle 120px at top    right,#0000 98%,#e9dcf5) top right,
+                radial-gradient(circle 120px at bottom left ,#0000 98%,#e9dcf5) bottom left,
+                radial-gradient(circle 120px at bottom right,#0000 98%,#e9dcf5) bottom right;
+    background-size:51% 51%;
+    /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); */
+    background-repeat:no-repeat;
     position: relative;
+    /* border: 10px solid white; */
+    background-clip: border-box; 
+}
+
+.digivice::before {
+    content: "";
+    position: absolute;
+    height: 90%;
+    width: 70%;
+    padding: 10px;
+    border: 4px solid #523e56;
+    border-radius: 99999px;
+    z-index: 10;
+}
+
+.digivice::after {
+    content: "";
+    position: absolute;
+    height: 85%;
+    width: 65%;
+    padding: 10px;
+    border: 4px solid #523e56;
+    border-radius: 99999px;
+    z-index: 10;
+}
+
+.digivice-screen-border::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border: 4px solid #523e56;
+    border-radius: 99999px;
+    z-index: 10;
 }
 
 .button-group {
@@ -23,7 +81,6 @@ body {
 .button-container {
     display: flex;
     justify-content: space-between;
-    position: absolute;
     align-items: center;
     top: 0px;
     right: 0px;
@@ -34,21 +91,33 @@ body {
 
 .button-subgroup {
     background-color: #a9c7cf;
-    border-radius: 50%;
-    width: 65px;
-    height: 45px;
-    padding: 10px 20px;
-    border: 4px solid black;
+    border: 4px solid #523e56;
+    z-index: 999;
 }
+
+.button-subgroup.button-circle {
+    width: 50px;
+    height: 50px;
+    padding: 10px 15px;
+}
+
 .button-circle {
     border-radius: 9999px;
-    width: 40px;
-    height: 40px;
-    background-color: #a9c7cf;
+}
+
+.button-subgroup.button-ellipse {
+    width: 65px;
+    height: 45px;
+    padding: 13px 20px;
+}
+
+
+.button-ellipse {
+    border-radius: 50%;
 }
 
 .digivice-button {
-    border: 4px solid black;
+    border: 4px solid #523e56;
     border-radius: 50%;
     height: 40px;
     cursor:pointer;
@@ -61,41 +130,40 @@ body {
 }
 
 .digivice-screen {
-    width: 250px;
-    height: 250px;
-    background-color: white;
-    border: 4px solid black;
+    width: 85%;
+    height: 200px;
+    background-color: #bdb79f;
+    border: 4px solid #523e56;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 10px;
+.digivice-screen-digimon {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    margin: 0px 100px;
+    max-height: 100%;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+input[type=text] {
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-transform: uppercase;
 }
 
-.column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+button {
+    border: 1px solid #bdb79f;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #bdb79f;
 }

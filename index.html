@@ -5,37 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/layout.css">
     <link rel="stylesheet" href="public/css/style.css">
     <title>Digiapi</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="button-container">
-            <div class="button-subgroup">
-                <div class="digivice-button">
+    <div>
+        <div class="grid grid-cols-5">
+            <div class="col-span-1"></div>
+            <div class="digivice col-span-3 margin-x-auto">
+                <div class="grid grid-cols-5">
+                    <div class="items-center">
+                        <div id="previous-digimon" class="button-subgroup button-circle">
+                            <div class="digivice-button button-circle">
 
-                </div>
-            </div>
-            <div class="button-group">
-                <div class="button-subgroup">
-                    <div class="digivice-button">
-
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="button-subgroup">
-                    <div class="digivice-button">
+                    <div class="items-center col-span-3 digivice-screen-border" style="justify-content: center;">
+                        <div class="digivice-screen">
+                            <img id="digivice-screen-digimon" class="digivice-screen-digimon" src="" alt="digivice">
+                        </div>
+                    </div>
+                    <div class="items-center" style="justify-content: start;">
+                        <div class="button-group">
+                            <div id="previous-evolution" class="button-subgroup button-ellipse">
+                                <div class="digivice-button button-ellipse">
 
+                                </div>
+                            </div>
+
+                            <div id="next-evolution" class="button-subgroup button-ellipse">
+                                <div class="digivice-button button-ellipse">
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="digivice-screen">
-
+        <div style="color:white; display:flex; justify-content: center; padding-top: 10px;">
+            <input id="digivice-input" type="text" id="text" />
+            <button id="search">Search Digimon</button>
         </div>
     </div>
+
+
     <script src="public/js/script.js"></script>
 </body>
 
